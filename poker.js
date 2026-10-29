@@ -1,4 +1,4 @@
-// Les fonctions permettant de créer de main et de mains ont été générés par IA
+// Lors de la creation du code, je me suis servi de l'IA
 
 export function creerMainAleatoire() {
     return Array.from({ length: 5 }, () => Math.floor(Math.random() * 14) + 1)
@@ -23,7 +23,12 @@ export function poker() {
     let points = 0;
 
     for (const main of mains) {
+        let valuesCount = {};
         for (const valeur of main) {
+            valuesCount[valeur] = (valuesCount[valeur] || 0) + 1;
+        }
+        if (Object.values(valuesCount).some(count => count >= 3)) {
+            points += 30;
         }
     }
 

@@ -1,3 +1,5 @@
+// Lors de la creation du code, je me suis servi de l'IA
+
 import { describe, expect, it } from 'vitest'
 import { creerMainAleatoire, creerMainsAleatoires, mainValide, poker } from './poker.js'
 
